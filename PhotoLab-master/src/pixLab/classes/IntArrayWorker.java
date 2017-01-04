@@ -1,6 +1,7 @@
 package pixLab.classes;
 
 import java.lang.Math.*;
+
 public class IntArrayWorker
 {
   /** two dimensional matrix */
@@ -51,18 +52,20 @@ public class IntArrayWorker
   
   public int getLargest()
   {
-	  int largenum = 0;
+	  int largenum = Integer.MIN_VALUE;
 	  
 	  for(int [] row : matrix)
 	  {
 		  for(int item : row)
 		  {
-			  if (item > abs(largenum))
+			  if (item > Math.abs(largenum))
 			  {
 				  largenum = item;
 			  }
 		  }
 	  }
+	  
+	  return largenum;
   }
   
   /**
